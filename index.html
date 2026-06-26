@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Où est le chat? — French Prepositions</title>
+<title>Где котик? — Французские предлоги места</title>
 <style>
 * {
   box-sizing: border-box;
@@ -247,32 +247,32 @@ header h1 {
 <div class="container">
 
   <header>
-    <h1>Où est le chat? 🐱</h1>
-    <p class="subtitle">Look at each picture. Choose the correct preposition: <strong>SUR</strong> (on), <strong>SOUS</strong> (under), or <strong>DANS</strong> (in).</p>
+    <h1>Где котик? 🐱</h1>
+    <p class="subtitle">Рассмотрите каждое изображение. Выберите правильный предлог: <strong>SUR</strong> (на), <strong>SOUS</strong> (под) или <strong>DANS</strong> (в/внутри).</p>
   </header>
 
   <section class="cheatsheet">
-    <h2>📌 Quick Reference</h2>
+    <h2>📌 Справочник предлогов</h2>
     <table>
-      <tr><th>Icon</th><th>Preposition</th><th>Meaning</th><th>Example</th><th></th></tr>
+      <tr><th>Иконка</th><th>Предлог</th><th>Значение</th><th>Пример</th><th></th></tr>
       <tr>
         <td style="font-size:1.5rem;text-align:center">⬆️</td>
         <td><strong>SUR</strong></td>
-        <td>on (surface)</td>
+        <td>на (поверхность)</td>
         <td>sur la table</td>
         <td><button class="speak-btn" data-text="sur la table">🔊</button></td>
       </tr>
       <tr>
         <td style="font-size:1.5rem;text-align:center">⬇️</td>
         <td><strong>SOUS</strong></td>
-        <td>under</td>
+        <td>под</td>
         <td>sous le lit</td>
         <td><button class="speak-btn" data-text="sous le lit">🔊</button></td>
       </tr>
       <tr>
         <td style="font-size:1.5rem;text-align:center">📦</td>
         <td><strong>DANS</strong></td>
-        <td>in (inside)</td>
+        <td>в/внутри</td>
         <td>dans la boîte</td>
         <td><button class="speak-btn" data-text="dans la boîte">🔊</button></td>
       </tr>
@@ -280,14 +280,14 @@ header h1 {
   </section>
 
   <section class="game">
-    <div class="progress-bar"><span id="progress-text">Répondu: 0/6</span></div>
+    <div class="progress-bar"><span id="progress-text">Ответов: 0/6</span></div>
     <div id="questions-container"></div>
   </section>
 
   <section class="summary" id="summary-section" style="display:none">
-    <h2>📊 Results</h2>
+    <h2>📊 Результаты</h2>
     <table id="summary-table">
-      <tr><th>#</th><th>Your Answer</th><th>Preposition</th><th>Meaning</th><th>✅</th></tr>
+      <tr><th>#</th><th>Ваш ответ</th><th>Предлог</th><th>Значение</th><th>✅</th></tr>
     </table>
   </section>
 
@@ -296,56 +296,56 @@ header h1 {
 const questions = [
   {
     scene: '1.png',
-    label: '1. The cat is hiding under the bed.',
+    label: '1. Котик прячется под кроватью.',
     correctIndex: 0,
     options: [
-      { text: 'Le chat est SOUS le lit.', explanation: '✅ SOUS = under. The cat is under the bed, not inside it.' },
-      { text: 'Le chat est DANS le lit.', explanation: '❌ SOUS = under. The cat is under the bed, not inside it.' }
+      { text: 'Le chat est SOUS le lit.', explanation: '✅ SOUS = под. Котик находится под кроватью, а не внутри неё.' },
+      { text: 'Le chat est DANS le lit.', explanation: '❌ SOUS = под. Котик находится под кроватью, а не внутри неё.' }
     ]
   },
   {
     scene: '2.png',
-    label: '2. The cat is lying on the bed.',
+    label: '2. Котик лежит на кровати.',
     correctIndex: 0,
     options: [
-      { text: 'Le chat est SUR le lit.', explanation: '✅ SUR = on. The cat is on the surface of the bed.' },
-      { text: 'Le chat est SOUS le lit.', explanation: '❌ SUR = on. The cat is on the bed, not under it.' }
+      { text: 'Le chat est SUR le lit.', explanation: '✅ SUR = на. Котик находится на поверхности кровати.' },
+      { text: 'Le chat est SOUS le lit.', explanation: '❌ SUR = на. Котик находится на кровати, а не под ней.' }
     ]
   },
   {
     scene: '3.png',
-    label: '3. The cat is peeking from under the blanket.',
+    label: '3. Котик выглядывает из-под одеяла.',
     correctIndex: 0,
     options: [
-      { text: 'Le chat est SOUS la couverture.', explanation: '✅ SOUS = under. The cat is hidden under the blanket.' },
-      { text: 'Le chat est SUR la couverture.', explanation: '❌ SOUS = under. The cat is under the blanket, not on it.' }
+      { text: 'Le chat est SOUS la couverture.', explanation: '✅ SOUS = под. Котик спрятан под одеялом.' },
+      { text: 'Le chat est SUR la couverture.', explanation: '❌ SOUS = под. Котик находится под одеялом, а не на нём.' }
     ]
   },
   {
     scene: '4.png',
-    label: '4. The cat is sitting in a box.',
+    label: '4. Котик сидит в коробке.',
     correctIndex: 0,
     options: [
-      { text: 'Le chat est DANS une boîte.', explanation: '✅ DANS = inside. The cat is inside the box.' },
-      { text: 'Le chat est SUR une boîte.', explanation: '❌ DANS = inside. The cat is inside the box, not on it.' }
+      { text: 'Le chat est DANS une boîte.', explanation: '✅ DANS = в. Котик находится внутри коробки.' },
+      { text: 'Le chat est SUR une boîte.', explanation: '❌ DANS = в. Котик находится внутри коробки, а не на ней.' }
     ]
   },
   {
     scene: '5.png',
-    label: '5. The cat is peeking from under the bed.',
+    label: '5. Котик выглядывает из-под кровати.',
     correctIndex: 1,
     options: [
-      { text: 'Le chat est DANS le lit.', explanation: '❌ SOUS = under. The cat is under the bed.' },
-      { text: 'Le chat est SOUS le lit.', explanation: '✅ SOUS = under. The cat is under the bed.' }
+      { text: 'Le chat est DANS le lit.', explanation: '❌ SOUS = под. Котик находится под кроватью.' },
+      { text: 'Le chat est SOUS le lit.', explanation: '✅ SOUS = под. Котик находится под кроватью.' }
     ]
   },
   {
     scene: '6.png',
-    label: '6. The cat is hidden under the blanket.',
+    label: '6. Котик спрятан под одеялом.',
     correctIndex: 0,
     options: [
-      { text: 'Le chat est SOUS la couverture.', explanation: '✅ SOUS = under. The blanket covers the cat.' },
-      { text: 'Le chat est SUR la couverture.', explanation: '❌ SOUS = under. The cat is under the blanket, not on it.' }
+      { text: 'Le chat est SOUS la couverture.', explanation: '✅ SOUS = под. Одеяло накрывает котика.' },
+      { text: 'Le chat est SUR la couverture.', explanation: '❌ SOUS = под. Котик находится под одеялом, а не на нём.' }
     ]
   }
 ];
@@ -371,7 +371,7 @@ function renderQuestions() {
 
     const qText = document.createElement('div');
     qText.className = 'question-text';
-    qText.innerHTML = `Où est le chat? <button class="speak-btn" data-text="Où est le chat" onclick="speak('Où est le chat')">🔊</button>`;
+    qText.innerHTML = `Où est le chat? <button class="speak-btn" data-text="Où est le chat" onclick="speak(\'Où est le chat\')">🔊</button>`;
 
     const label = document.createElement('p');
     label.style.cssText = 'font-size:0.85rem;color:#888;text-align:center;margin-bottom:8px;';
@@ -384,7 +384,7 @@ function renderQuestions() {
       const btn = document.createElement('button');
       btn.className = 'option-btn';
       const cleanText = opt.text.replace(/<[^>]*>/g, '').trim();
-      btn.innerHTML = `${String.fromCharCode(97 + optIdx)}. ${opt.text} <button class="speak-btn" data-text="${cleanText}" onclick="event.stopPropagation(); speak('${cleanText}')">🔊</button>`;
+      btn.innerHTML = `${String.fromCharCode(97 + optIdx)}. ${opt.text} <button class="speak-btn" data-text="${cleanText}" onclick="event.stopPropagation(); speak(\'${cleanText}\')">🔊</button>`;
       btn.onclick = () => handleAnswer(idx, optIdx);
       btn.id = `q-${idx}-opt-${optIdx}`;
       optionsDiv.appendChild(btn);
@@ -426,7 +426,7 @@ function handleAnswer(qIdx, optIdx) {
   explDiv.classList.add('show');
 
   answered++;
-  document.getElementById('progress-text').textContent = `Répondu: ${answered}/${totalQuestions}`;
+  document.getElementById('progress-text').textContent = `Ответов: ${answered}/${totalQuestions}`;
 
   if (answered === totalQuestions) {
     showSummary();
@@ -457,7 +457,7 @@ function showSummary() {
 
     cellAnswer.textContent = String.fromCharCode(97 + chosenIdx);
     cellPrep.textContent = chosenPrep;
-    cellMeaning.textContent = chosenPrep === 'SUR' ? 'on' : chosenPrep === 'SOUS' ? 'under' : chosenPrep === 'DANS' ? 'in' : '—';
+    cellMeaning.textContent = chosenPrep === 'SUR' ? 'на' : chosenPrep === 'SOUS' ? 'под' : chosenPrep === 'DANS' ? 'в/внутри' : '—';
     cellCheck.textContent = chosenIdx === q.correctIndex ? '✅' : '❌';
   });
 }
